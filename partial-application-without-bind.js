@@ -1,12 +1,10 @@
 var slice = Array.prototype.slice;
 
 function logger(namespace) {
-    return modifiedLogger;
-
-    function modifiedLogger() {
+    return function modifiedLogger() {
         var argumentsArray = slice.call(arguments);
         argumentsArray.unshift(namespace);
-        console.log.apply(null, argumentsArray);
+        console.log.apply(null,argumentsArray);
     }
 }
 

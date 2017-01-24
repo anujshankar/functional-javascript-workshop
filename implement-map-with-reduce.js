@@ -1,7 +1,7 @@
-function arrayMap(arrayToProcess, fn) {
+function arrayMap(arrayToProcess, operationFunction) {
 
-    var mapUsingReduce = arrayToProcess.reduce(function (accumalator, item, index, arr) {
-        accumalator.push(fn(item, index, arr));
+    var mapUsingReduce = arrayToProcess.reduce(function (accumalator, item) {
+        accumalator.push(operationFunction(item));
         return accumalator;
     }, []);
 
