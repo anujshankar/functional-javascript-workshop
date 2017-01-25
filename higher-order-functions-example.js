@@ -1,5 +1,6 @@
 function repeat(operation, limit) {
-    for(var i = 0; i < limit; i++) {
+    
+    for (var i = 0; i < limit; i++) {
         operation();
     }
 }
