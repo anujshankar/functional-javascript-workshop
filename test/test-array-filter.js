@@ -47,16 +47,15 @@ describe('getShortMessages function gets incorrect input and returns an error me
     }
   ];
 
-
   it('should return an error message when input is a string but not an array of objects', function () {
     expect(getShortMessages('Hello Testing')).to.eqls(errorMessage);
   });
 
-  it('should return an error message when input is an object but not an array of objects', function () {
+  it('should return an error message when input is an empty object but not an array of objects', function () {
     expect(getShortMessages({})).to.eqls(errorMessage);
   });
 
-  it('should return an error message when input is an array of object without message property', function () {
+  it('should return an error message when input is an array of objects without message property', function () {
     expect(getShortMessages(messagesTest1)).to.eqls(errorMessage);
   });
 });
