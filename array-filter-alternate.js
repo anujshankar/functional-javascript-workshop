@@ -1,9 +1,9 @@
 function getShortMessages(messages) {
   var isValid = true;
-  
+
   if (messages instanceof Array === true) {
-    isValid = messages.every(function isMessageObject(object){
-      return Object.prototype.hasOwnProperty.call(object,'message');
+    isValid = messages.every(function isMessageObject(object) {
+      return Object.prototype.hasOwnProperty.call(object, 'message');
     });
   }
   else {

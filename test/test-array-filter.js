@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = chai.expect;
-var getShortMessages = require('../array-filter.js');
+var getShortMessages = require('../array-filter-alternate.js');
 
 describe('getShortMessages function takes input as an array of objects with message property and returns an array with messages having character length less than 50', function () {
   var messagesTest1 = [
@@ -24,7 +24,7 @@ describe('getShortMessages function takes input as an array of objects with mess
     expect(getShortMessages(messagesTest1)).to.eqls(['Welcome Chai.js and Mocha.js']);
   });
 
-  it('should return an empty array since no message in the array of objects is less than 50 characters', function () {
+  it('should return an empty array when no message in the array of objects is less than 50 characters', function () {
     expect(getShortMessages(messagesTest2)).to.eqls([]);
   });
 
